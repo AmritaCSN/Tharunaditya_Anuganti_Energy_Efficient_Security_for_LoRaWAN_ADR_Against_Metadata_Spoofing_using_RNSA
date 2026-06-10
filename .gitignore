@@ -1,0 +1,125 @@
+# ─────────────────────────────────────────────────────────────
+# .gitignore for ADR-Secure / FLoRa LoRaWAN simulation project
+# ─────────────────────────────────────────────────────────────
+
+# ── OMNeT++ build artifacts ──────────────────────────────────
+*.slo
+*.lo
+*.o
+*.obj
+*.a
+*.la
+*.lai
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+*.app
+
+# ── FLoRa compiled binaries ───────────────────────────────────
+flora/src/flora
+flora/src/flora_dbg
+flora/src/libflora*
+flora/src/**/*_m.h
+flora/src/**/*_m.cc
+flora/src/Makefile
+flora/out/
+
+# ── OMNeT++ IDE / Eclipse project files ───────────────────────
+.metadata/
+.settings/
+flora/.settings/
+**/.cmdenv-log
+**/.qtenvrc
+
+# ── Simulation result files (large binary/text data) ─────────
+flora/simulations/results/
+flora/simulations/**/*.sca
+flora/simulations/**/*.vec
+flora/simulations/**/*.vci
+flora/simulations/**/*.anf
+
+# ── CSV result exports (large, auto-regenerated) ─────────────
+results/*.csv
+results/run_logs/
+
+# ── LaTeX build artifacts ─────────────────────────────────────
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.nav
+paper/*.snm
+paper/*.toc
+paper/*.synctex.gz
+paper/*.fdb_latexmk
+paper/*.fls
+journal/*.aux
+journal/*.log
+journal/*.out
+
+# Generated PDFs (keep the source, not the output)
+# paper/main.pdf           ← uncomment to also exclude PDF
+# paper/presentation.pdf  ← uncomment to also exclude PDF
+
+# ── Python artifacts ──────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Log files generated during runs ──────────────────────────
+results/*.log
+results/run_logs/
+scripts/run_all.log
+scripts/run_new_sims.log
+scripts/err.txt
+scripts/out.txt
+gen_ini_log.txt
+gen_uniform_err.txt
+gen_uniform_out.txt
+postprocess.log
+sim_progress.log
+run_log.txt
+stdout*.txt
+stderr*.txt
+test_out.txt
+test_err.txt
+
+# ── Large temporary output files ─────────────────────────────
+pdflatex_*.txt
+analysis_output.txt
+
+# ── Simulation week screenshots / binary media ───────────────
+week1_screenshots/
+downloads/
+
+# ── INET framework (installed dependency, not source of this project) ──
+inet4.4/
+
+# ── OS-generated files ────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ── Editor / IDE files ────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+
+# ── Windows-specific ──────────────────────────────────────────
+$RECYCLE.BIN/
+*.lnk
