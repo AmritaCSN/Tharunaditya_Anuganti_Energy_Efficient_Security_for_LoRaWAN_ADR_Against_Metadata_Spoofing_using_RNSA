@@ -44,23 +44,20 @@ flora/simulations/**/*.anf
 results/*.csv
 results/run_logs/
 
-# ── LaTeX build artifacts ─────────────────────────────────────
-paper/*.aux
-paper/*.log
-paper/*.out
-paper/*.nav
-paper/*.snm
-paper/*.toc
-paper/*.synctex.gz
-paper/*.fdb_latexmk
-paper/*.fls
-journal/*.aux
-journal/*.log
-journal/*.out
+# ── Paper / journal directories (not tracked) ───────────────
+paper/
+journal/
 
-# Generated PDFs (keep the source, not the output)
-# paper/main.pdf           ← uncomment to also exclude PDF
-# paper/presentation.pdf  ← uncomment to also exclude PDF
+# ── Paper-related output files ────────────────────────────────
+results/tables/
+results/paper_numbers.txt
+
+# ── Journal / paper scripts (not tracked) ────────────────────
+scripts/update_paper.py
+scripts/journal_analysis.py
+scripts/gen_journal_inis.py
+scripts/run_journal_all.sh
+scripts/run_journal_experiments.ps1
 
 # ── Python artifacts ──────────────────────────────────────────
 __pycache__/

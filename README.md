@@ -55,25 +55,26 @@ All numbers are averaged over 5 independent simulation runs (different random se
 │   │   ├── LoRaEnergyModules/
 │   │   └── LoraNode/
 │   └── simulations/
-│       └── examples/               ← 33 experiment INI configs
+│       └── examples/               ← 30 experiment INI configs
 │
 ├── scripts/
-│   ├── analyze_results.py          ← Analysis, figures, LaTeX tables
-│   ├── update_paper.py             ← Patches paper with simulation numbers
-│   ├── run_matrix.ps1              ← Windows: run all experiments
+│   ├── analyze_results.py          ← Export SCA files, generate figures and result summaries
+│   ├── run_matrix.ps1              ← Windows: run all experiments sequentially
 │   ├── gen_uniform_ini.py          ← Uniform topology INI generator
-│   └── ...
+│   ├── gen_scaleup_ini.py          ← Scalability INI generator
+│   ├── setup_env.ps1               ← Environment validator (Windows)
+│   ├── verify_build.ps1            ← Post-build verification
+│   └── build_all.sh                ← Linux/WSL build helper
 │
 ├── results/
-│   ├── figures/                    ← Generated plots (PDR vs K, SF distribution, etc.)
-│   └── tables/                     ← Generated LaTeX tables
+│   └── figures/                    ← Generated plots (PDR vs K, SF distribution, scalability, etc.)
 │
 └── docs/
     ├── PROJECT_EXPLANATION.md      ← Full write-up of attack, defense, and results
     ├── SETUP_GUIDE.md              ← Installation instructions
     ├── SIMULATION_GUIDE.md         ← How to run experiments
-    ├── TROUBLESHOOTING.md          ← Known issues
-    └── VERSION_NOTES.md            ← Version compatibility matrix
+    ├── TROUBLESHOOTING.md          ← Known issues and fixes
+    └── VERSION_NOTES.md            ← Verified version compatibility matrix
 ```
 
 ---
@@ -125,7 +126,7 @@ python scripts/analyze_results.py --export
 python scripts/analyze_results.py
 ```
 
-Figures go to `results/figures/`, LaTeX tables go to `results/tables/`.
+Figures go to `results/figures/`.
 
 ---
 
@@ -171,7 +172,7 @@ Activated by: `**.networkServer.app[0].adrMethod = "secure"` in the INI file.
 
 ## Simulation Configurations
 
-The `flora/simulations/examples/` directory contains 33 INI files:
+The `flora/simulations/examples/` directory contains 30 INI configs:
 
 | Pattern | Description |
 |---------|-------------|
