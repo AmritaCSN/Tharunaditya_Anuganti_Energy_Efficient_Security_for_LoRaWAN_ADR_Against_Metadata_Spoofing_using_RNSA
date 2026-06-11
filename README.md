@@ -1,4 +1,5 @@
-# ADR-Secure: Byzantine-Resilient Adaptive Data-Rate Control for LoRaWAN
+# Energy Efficient Security for LoRaWAN ADR Against Metadata Spoofing using Robust Network Server aggregation
+# ADR-Secure: Byzantine-Resilient Adaptive Data-Rate Control for LoRaWAN 
 
 [![OMNeT++ 6.0.3](https://img.shields.io/badge/OMNeT%2B%2B-6.0.3-green.svg)](https://omnetpp.org)
 [![INET 4.4.1](https://img.shields.io/badge/INET-4.4.1-orange.svg)](https://inet.omnetpp.org)
